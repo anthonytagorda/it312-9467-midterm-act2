@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+header {
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(22, 154, 174);
+}
+
+header-site-logo {
+  margin: auto;
+}
+
+header-site-logo img {
+  display: block;
+  height: 30px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,32 +31,37 @@ body {
 .nav {
   text-align: center;
   font-size: 1rem;
-  border-bottom: 1px solid #dee2e6;
   padding-left: 5px;
   padding-right: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  flex-grow: 1;
 }
 
 .nav-link {
   text-decoration: none;
   display: inline-block;
   padding: 13px 13px;
-  color: #212529;
+  color: #fff;
   margin-right: 5px;
+  font-weight: 500;
 }
 
 .nav-link:hover {
   text-decoration:none;
-  background-color: #fefefe;
+  background-color: #42424292;
   border-bottom: 2px solid #000000;
 }
+
 .nav-link.current {
   border-bottom: 2px solid #000000;
 }
+
 .btn {
   padding: 10px 20px;
   font-size: 1rem;
 }
+
 @media (min-width: 768px) {
   .nav {
     font-size: 1.1rem;
