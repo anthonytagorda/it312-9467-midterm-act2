@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Travel Guide</title>
-    <link href="global.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
+<html>
+<head>
+    <title>Baguio City Guide</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
     <header>
-      <a class="header-site-logo", href="index.html"><img src="assets/site-logo.png" alt="Site Logo"></a>
-      <nav class="nav">
-        <a href="PlacesToGo.html" class="nav-link">PLACES TO GO</a>
-        <a href="PlacesToEat.html" class="nav-link">PLACES TO EAT</a>
-        <a href="PlacesToStay.html" class="nav-link">PLACES TO STAY</a>
-      </nav>
+        <img src="assets/site-logo.png" alt="Site Logo" id="logo">
+        <div id="category-selector">
+            <label for="category">Select Category:</label>
+            <select id="category" multiple>
+                <option value="accommodation">Accommodation</option>
+                <option value="commercial">Commercial</option>
+                <option value="catering">Catering</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="leisure">Leisure</option>
+                <option value="natural">Natural</option>
+                <option value="tourism">Tourism</option>
+                <option value="religion">Religion</option>
+            </select>
+        </div>
     </header>
+    <main>
+        <div id="places-list">
+            <!-- Place information will be displayed here -->
+        </div>
+    </main>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
