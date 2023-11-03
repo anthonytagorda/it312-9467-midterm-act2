@@ -2,6 +2,20 @@ const categorySelector = document.getElementById('category');
 const placesList = document.getElementById('places-list');
 const apiKey = '5aa4bbc3a35d4f24a9539fd819bfcf50';
 
+// Function to scroll to the top of the page
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}
+
+// Create and append the "Back to Top" button
+const backToTopButton = document.createElement('div');
+backToTopButton.id = 'back-to-top-button';
+backToTopButton.innerHTML = '<a href="#top">Back to Top</a>';
+document.body.appendChild(backToTopButton);
+
+backToTopButton.addEventListener('click', scrollToTop);
+
 categorySelector.addEventListener('change', () => {
     // Get selected categories
     const selectedCategories = Array.from(categorySelector.selectedOptions, option => option.value);
@@ -39,4 +53,13 @@ categorySelector.addEventListener('change', () => {
         .catch(error => {
             console.error('Error fetching data:', error);
         });
+});
+
+// Show or hide the "Back to Top" button based on the scroll position
+window.addEventListener('scroll', () => {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
 });

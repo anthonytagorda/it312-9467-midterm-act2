@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #5ea752;
     color: #fff;
     padding: 10px;
     display: flex;
@@ -18,7 +18,7 @@ header {
 }
 
 #logo {
-    width: 100px;
+    width: 150px;
     height: auto;
     margin-left: 20px;
 }
@@ -45,6 +45,58 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#places-list .place {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#places-list h3 {
+    font-size: 1.2em;
+    color: #000;
+    text-transform: uppercase;
+}
+
+#places-list p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+#places-list .place {
+    margin-bottom: 20px;
+}
+
+#places-list p {
+    margin: 5px 0;
+}
+
 #places-list {
-    /* Place style for the list of places here */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#places-list .place:hover {
+    background-color: rgba(59, 211, 48, 0.36);
+    border-color: #236e17;
+}
+
+#back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+#back-to-top-button a {
+    text-decoration: none;
+    color: #fff;
 }
