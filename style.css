@@ -2,7 +2,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: hsl(0, 0%, 96%);
     margin: 0;
     padding: 0px;
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -25,35 +25,34 @@ header {
 }
 
 .category {
-    display: flex;
-    align-items: center;
-    padding: 35px 0;
-    max-width: 2000px;
-    background: #fff;
-    border-radius: 13px;
+    padding: 35px;
     position: relative;
     overflow-x: hidden;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 13px;
+    margin: 0 auto;
 }
 
 .category .icon {
     position: absolute;
     top: 0;
     height: 100%;
-    width: 500px;
+    width: 120px;
     display: flex;
     align-items: center;
-    border-radius: 13px;
 }
 
 .icon:first-child {
     left: 0;
-    background: linear-gradient(90deg, #fff, 20%, transparent);
+    display: none;
+    background: linear-gradient(90deg, #fff 70%, transparent);
 }
 
 .icon:last-child {
     right: 0;
     justify-content: flex-end;
-    background: linear-gradient(270deg, #fff, 70%, transparent);
+    background: linear-gradient(-90deg, #fff 70%, transparent);
 }
 
 .icon i {
@@ -72,28 +71,48 @@ header {
 
 .icon:first-child i {
     margin-left: 15px;
-}
+} 
 
 .icon:last-child i {
     margin-right: 15px;
-}
+} 
 
 .category .tabs-box {
     display: flex;
     gap: 12px;
     list-style: none;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: auto 0;
 }
 
+.tabs-box.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+}
 .tabs-box .tab {
     cursor: pointer;
     font-size: 1.18rem;
     white-space: nowrap;
-    background-color: #f5f4fd;
-    border: 1px solid #d8d5f2;
+    background: #f5f4fd;
     padding: 13px 20px;
     border-radius: 30px;
     border: 1px solid #d8d5f2;
+}
+
+.tabs-box .tab:hover{
+    background: #efedfb;
+}
+
+.tabs-box.dragging .tab {
+    user-select: none;
+    pointer-events: none;
+}
+
+.tabs-box .tab.active{
+    color: #fff;
+    background: #236e17;
+    border-color: transparent;
 }
 
 main {
@@ -161,29 +180,3 @@ main {
     text-decoration: none;
     color: #fff;
 }
-
-#category-selector ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-#category-selector li {
-    margin: 0;
-    padding: 0;
-}
-
-#category-selector a {
-    text-decoration: none;
-    color: #000;
-    margin: 0 10px;
-    padding: 5px 10px;
-    background-color: #5ea752;
-    border-radius: 5px;
-}
-
-#category-selector a:hover {
-    background-color: #236e17;
-}
-

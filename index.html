@@ -3,34 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/site-logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Baguio City Guide</title>
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
     <header>
         <img src="assets/site-logo.png" alt="Site Logo" id="logo">
-        <div id="category-selector">
-            <label for="category">Select Category:</label>
-            <select id="category" multiple>
-                <option value="accommodation">Accommodation</option>
-                <option value="commercial">Commercial</option>
-                <option value="catering">Catering</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="leisure">Leisure</option>
-                <option value="natural">Natural</option>
-                <option value="tourism">Tourism</option>
-                <option value="religion">Religion</option>
-            </select>
-        </div>
     </header>
     <div class="category">
         <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
         <ul class="tabs-box">
-            <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
-            <li class="tab">Accommodation</li>
-            <li class="tab">Commercial</li>
+            <li id="accommodation" class="tab active">Accommodation</li>
+            <li id="commercial" class="tab">Commercial</li>
             <li class="tab">Catering</li>
             <li class="tab">Entertainment</li>
             <li class="tab">Leisure</li>
@@ -39,12 +26,11 @@
             <li class="tab">Religion</li>
         </ul>
         <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
-    </div>
+      </div>
     <main>
         <div id="places-list">
             <!-- Place information will be displayed here -->
         </div>
     </main>
 </body>
-<script src="scripts/script.js" defer></script>
 </html>
