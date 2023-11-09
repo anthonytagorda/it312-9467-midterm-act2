@@ -1,3 +1,4 @@
+// TAGORDA, Anthony
 const categorySelector = document.querySelector('.tabs-box');
 const placesList = document.getElementById('places-list');
 const apiKey = '5aa4bbc3a35d4f24a9539fd819bfcf50';
@@ -14,6 +15,7 @@ const handleIcons = (scrollVal) => {
     arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "none" : "flex";
 }
 
+// CASEM, Rialene
 // Function to fetch data from specific category
 categorySelector.addEventListener('click', (event) => {
     if (event.target.classList.contains('tab')) {
@@ -56,6 +58,7 @@ categorySelector.addEventListener('click', (event) => {
     }
 });
 
+// TAGORDA, Anthony
 allTabs.forEach(tab => {
     tab.addEventListener("click", () => {
         // Check if the clicked tab has the "active" class
@@ -96,6 +99,7 @@ tabsBox.addEventListener("mousedown", () => isDragging = true);
 tabsBox.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 
+// CASEM, Rialene
 // Function to scroll to the top of the page
 function scrollToTop() {
     document.body.scrollTop = 0; // For Safari
@@ -118,4 +122,3 @@ window.addEventListener('scroll', () => {
         backToTopButton.style.display = 'none';
     }
 });
-

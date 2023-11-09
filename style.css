@@ -1,5 +1,9 @@
+/* CASEM, Rialene */
+
+/* Importing the Roboto font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* Styling for the entire web page */
 body {
     font-family: Arial, sans-serif;
     background-color: hsl(0, 0%, 96%);
@@ -8,6 +12,7 @@ body {
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
+/* Styling for the header section */
 header {
     background-color: #5ea752;
     color: #fff;
@@ -18,6 +23,7 @@ header {
     border-bottom: 5px solid #000000;
 }
 
+/* Styling for the web page logo */
 #logo {
     width: 30%;
     display: block;
@@ -25,6 +31,8 @@ header {
     margin-right: auto;
 }
 
+/* TAGORDA, Anthony */
+/* Styling for the category section */
 .category {
     padding: 35px;
     position: relative;
@@ -35,6 +43,7 @@ header {
     margin: 0 auto;
 }
 
+/* Styling for icons within the category section */
 .category .icon {
     position: absolute;
     top: 0;
@@ -44,18 +53,19 @@ header {
     align-items: center;
 }
 
+/* Styling for the first and last icon */
 .icon:first-child {
     left: 0;
     display: none;
     background: linear-gradient(90deg, #fff 70%, transparent);
 }
-
 .icon:last-child {
     right: 0;
     justify-content: flex-end;
     background: linear-gradient(-90deg, #fff 70%, transparent);
 }
 
+/* Styling for the icon's content */
 .icon i {
     width: 55px;
     height: 55px;
@@ -66,6 +76,7 @@ header {
     border-radius: 50%;
 }
 
+/* Hover effect for the icons */
 .icon i:hover {
     background: #efedfb;
 }
@@ -78,6 +89,7 @@ header {
     margin-right: 15px;
 } 
 
+/* Styling for the tabs in the category section */
 .category .tabs-box {
     display: flex;
     gap: 12px;
@@ -87,10 +99,13 @@ header {
     margin: auto 0;
 }
 
+/* Styling for the tabs when dragging */
 .tabs-box.dragging {
     scroll-behavior: auto;
     cursor: grab;
 }
+
+/* Styling for the individual tabs */
 .tabs-box .tab {
     cursor: pointer;
     font-size: 1.18rem;
@@ -101,6 +116,7 @@ header {
     border: 1px solid #d8d5f2;
 }
 
+/*Hover effects for the tabs */
 .tabs-box .tab:hover{
     background: #efedfb;
 }
@@ -110,12 +126,15 @@ header {
     pointer-events: none;
 }
 
+/* Styling for the active tab */
 .tabs-box .tab.active{
     color: #fff;
     background: #236e17;
     border-color: transparent;
 }
 
+/* CASEM, Rialene */
+/* Styling for the main content section */
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -125,6 +144,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling for the places on each of the catagory */
 #places-list .place {
     border: 1px solid #ddd;
     background-color: #f9f9f9;
@@ -133,12 +153,14 @@ main {
     border-radius: 5px;
 }
 
+/* Styling for each of the place titles */
 #places-list h3 {
     font-size: 1.2em;
     color: #000;
     text-transform: uppercase;
 }
 
+/* Styling for the description of each place */
 #places-list p {
     font-size: 0.9em;
     color: #333;
@@ -165,6 +187,7 @@ main {
     border-width: 3px;
 }
 
+/* Styling for the back-to-top button */
 #back-to-top-button {
     position: fixed;
     bottom: 20px;
